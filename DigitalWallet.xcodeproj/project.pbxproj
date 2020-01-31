@@ -11,6 +11,7 @@
 		345EA41223DF847C00E28076 /* CreditCard.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 345EA41123DF847C00E28076 /* CreditCard.ttf */; };
 		345EA41423DF86E400E28076 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345EA41323DF86E400E28076 /* Card.swift */; };
 		345EA41623DF878D00E28076 /* CardCaption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345EA41523DF878D00E28076 /* CardCaption.swift */; };
+		34A192A123E4DD1A00125FCC /* AddCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A192A023E4DD1A00125FCC /* AddCardView.swift */; };
 		34F9B5F823A97CDB006483AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F9B5F723A97CDB006483AD /* AppDelegate.swift */; };
 		34F9B5FA23A97CDB006483AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F9B5F923A97CDB006483AD /* SceneDelegate.swift */; };
 		34F9B5FD23A97CDB006483AD /* DigitalWallet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 34F9B5FB23A97CDB006483AD /* DigitalWallet.xcdatamodeld */; };
@@ -25,6 +26,7 @@
 		345EA41123DF847C00E28076 /* CreditCard.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CreditCard.ttf; sourceTree = "<group>"; };
 		345EA41323DF86E400E28076 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		345EA41523DF878D00E28076 /* CardCaption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCaption.swift; sourceTree = "<group>"; };
+		34A192A023E4DD1A00125FCC /* AddCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardView.swift; sourceTree = "<group>"; };
 		34F9B5F423A97CDB006483AD /* DigitalWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigitalWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34F9B5F723A97CDB006483AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34F9B5F923A97CDB006483AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +75,14 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		34A192A223E4DD2500125FCC /* Add Card */ = {
+			isa = PBXGroup;
+			children = (
+				34A192A023E4DD1A00125FCC /* AddCardView.swift */,
+			);
+			path = "Add Card";
+			sourceTree = "<group>";
+		};
 		34F9B5EB23A97CDB006483AD = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +106,7 @@
 				34F9B5F923A97CDB006483AD /* SceneDelegate.swift */,
 				34F9B5FE23A97CDB006483AD /* ContentView.swift */,
 				345EA40C23DF6B3C00E28076 /* Home */,
+				34A192A223E4DD2500125FCC /* Add Card */,
 				34F9B60023A97CDE006483AD /* Assets.xcassets */,
 				34F9B60523A97CDE006483AD /* LaunchScreen.storyboard */,
 				34F9B60823A97CDE006483AD /* Info.plist */,
@@ -188,6 +199,7 @@
 			files = (
 				34F9B5F823A97CDB006483AD /* AppDelegate.swift in Sources */,
 				345EA41423DF86E400E28076 /* Card.swift in Sources */,
+				34A192A123E4DD1A00125FCC /* AddCardView.swift in Sources */,
 				345EA41623DF878D00E28076 /* CardCaption.swift in Sources */,
 				34F9B5FD23A97CDB006483AD /* DigitalWallet.xcdatamodeld in Sources */,
 				34F9B5FF23A97CDB006483AD /* ContentView.swift in Sources */,

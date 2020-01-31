@@ -63,13 +63,11 @@ struct ContentView: View {
             }
             .navigationBarTitle(Text("Wallet"))
             .navigationBarItems(trailing:
-                Button(action: {
-                    print("Add")
-                }, label: {
+                NavigationLink(destination: AddCardView()) {
                     Text("Add Card")
-                })
+                }
             )
-        }
+        }.navigationViewStyle(StackNavigationViewStyle())
         
     }
 }            
