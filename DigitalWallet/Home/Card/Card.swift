@@ -10,11 +10,11 @@ import Foundation
 
 struct Card: Identifiable {
     let id: UUID = UUID()
-    let number: String
-    let bankEntity: String
-    let holder: String
-    let monthExp: Int
-    let yearExp: Int
-    let cvc: Int
+    var number: String
+    var bankEntity: String
+    var holder: String
+    var monthExp: Int
+    var yearExp: Int
+    var cvc: Int
     let memberSince: Int
 }
