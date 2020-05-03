@@ -19,7 +19,6 @@
 		34F9B60123A97CDE006483AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34F9B60023A97CDE006483AD /* Assets.xcassets */; };
 		34F9B60423A97CDE006483AD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34F9B60323A97CDE006483AD /* Preview Assets.xcassets */; };
 		34F9B60723A97CDE006483AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34F9B60523A97CDE006483AD /* LaunchScreen.storyboard */; };
-		682A0B9E243A12B2000A8A07 /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682A0B9D243A12B2000A8A07 /* FloatingButton.swift */; };
 		68668CA82438F8AC00C00A43 /* NewCardForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68668CA72438F8AC00C00A43 /* NewCardForm.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +37,6 @@
 		34F9B60323A97CDE006483AD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		34F9B60623A97CDE006483AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		34F9B60823A97CDE006483AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		682A0B9D243A12B2000A8A07 /* FloatingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButton.swift; sourceTree = "<group>"; };
 		68668CA72438F8AC00C00A43 /* NewCardForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCardForm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -134,7 +132,6 @@
 			isa = PBXGroup;
 			children = (
 				68668CA72438F8AC00C00A43 /* NewCardForm.swift */,
-				682A0B9D243A12B2000A8A07 /* FloatingButton.swift */,
 			);
 			path = Form;
 			sourceTree = "<group>";
@@ -218,7 +215,6 @@
 				34F9B5FD23A97CDB006483AD /* DigitalWallet.xcdatamodeld in Sources */,
 				68668CA82438F8AC00C00A43 /* NewCardForm.swift in Sources */,
 				34F9B5FF23A97CDB006483AD /* ContentView.swift in Sources */,
-				682A0B9E243A12B2000A8A07 /* FloatingButton.swift in Sources */,
 				34F9B5FA23A97CDB006483AD /* SceneDelegate.swift in Sources */,
 				345EA40F23DF712900E28076 /* CardView.swift in Sources */,
 			);
@@ -358,14 +354,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"DigitalWallet/Preview Content\"";
-				DEVELOPMENT_TEAM = SUQ9UXZ45L;
+				DEVELOPMENT_TEAM = SM5DS4HC25;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = DigitalWallet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dreyes.DigitalWallet;
+				PRODUCT_BUNDLE_IDENTIFIER = mx.dreyes.DigitalWallet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -378,14 +374,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"DigitalWallet/Preview Content\"";
-				DEVELOPMENT_TEAM = SUQ9UXZ45L;
+				DEVELOPMENT_TEAM = SM5DS4HC25;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = DigitalWallet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dreyes.DigitalWallet;
+				PRODUCT_BUNDLE_IDENTIFIER = mx.dreyes.DigitalWallet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

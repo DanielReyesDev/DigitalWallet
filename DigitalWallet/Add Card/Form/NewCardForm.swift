@@ -8,30 +8,34 @@
 
 import SwiftUI
 
-struct NewCardForm: View {
+struct NewCardForm {
     
-//    @State private var card: Card = Card(number: "",
-//                                         bankEntity: "",
-//                                         holder: "Daniel Reyes Sanchez",
-//                                         monthExp: 00,
-//                                         yearExp: 00,
-//                                         cvc: 000,
-//                                         memberSince: 0000)
-    
+    // MARK: State Properties
+    @Binding var title: String
+    @Binding var placeholder: String
     @Binding var text: String
     
-    private let numberFormatter: NumberFormatter = {
-        let formatter = NumberFormatter()
-        return formatter
-    }()
+    // MARK: Properties
+    private let numberFormatter = NumberFormatter()
+    private let action: (_ field: String) -> Void = { _ in }
     
+    // MARK: init
+    init(title: Binding<String>, placeholder: Binding<String>, text: Binding<String>) {
+        _title = title
+        _placeholder = placeholder
+        _text = text
+    }
+}
+
+// MARK: - View
+extension NewCardForm: View {
     var body: some View {
         VStack {
             VStack {
-                Text("Card Number: ")
+                Text(title)
                     .font(.system(size: 18, weight: .semibold, design: .default))
                 
-                TextField("1234-1234-1234-1234", text: $text)
+                TextField(placeholder, text: $text)
                     .font(.system(size: 20))
                     .multilineTextAlignment(.center)
                     .keyboardType(.numberPad)
@@ -40,8 +44,11 @@ struct NewCardForm: View {
     }
 }
 
+// MARK: - Preview
 struct NewCardForm_Previews: PreviewProvider {
     static var previews: some View {
-        NewCardForm(text: .constant(""))
+        NewCardForm(title: .constant(""),
+                    placeholder: .constant(""),
+                    text: .constant(""))
     }
 }

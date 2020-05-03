@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Card: Identifiable {
+class Card: Identifiable {
     let id: UUID = UUID()
     var number: String
     var bankEntity: String
@@ -16,5 +16,36 @@ struct Card: Identifiable {
     var monthExp: Int
     var yearExp: Int
     var cvc: Int
-    let memberSince: Int
+    var memberSince: Int
+    
+    init(number: String, bankEntity: String, holder: String, monthExp: Int, yearExp: Int, cvc: Int, memberSince: Int) {
+        self.number = number
+        self.bankEntity = bankEntity
+        self.holder = holder
+        self.monthExp = monthExp
+        self.yearExp = yearExp
+        self.cvc = cvc
+        self.memberSince = memberSince
+    }
+}
+
+final class Constants {
+    
+    struct Card {
+        static let titles = ["Card Number",
+                             "Bank's name",
+                             "Holder's name",
+                             "Exp. Month",
+                             "Exp. Year",
+                             "CVC",
+                             "Member Since"]
+        
+        static let placeholders = ["1234-1234-1234-1234",
+                                   "My Bank",
+                                   "Jonh Doe",
+                                   "07",
+                                   "21",
+                                   "123",
+                                   "2019"]
+    }
 }

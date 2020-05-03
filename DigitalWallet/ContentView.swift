@@ -33,6 +33,14 @@ let cards = [Card(number: "4444 4444 4444 4444",
 
 struct ContentView: View {
     
+//    var cardsData = [CardViewModel(number: .constant("4444 4444 4444 4444"),
+//                                   bankEntity: .constant("Banorte"),
+//                                   holder: .constant("Daniel Reyes Sanchez"),
+//                                   monthExp: .constant("07"),
+//                                   yearExp: .constant("22"),
+//                                   cvc: .constant("123"),
+//                                   memberSince: .constant("2018"))]
+    
     var cardsData = cards
     
     @State var viewState = CGSize.zero
@@ -46,13 +54,12 @@ struct ContentView: View {
                         ForEach(cardsData) { card in
                             Button(action: { self.showContent.toggle() }) {
                                 GeometryReader { geometry in
-                                    CardView(card: card)
+                                    CardView(viewModel: card)
                                     .rotation3DEffect(Angle(degrees: Double(geometry.frame(in: .global).minX - 30) / -40), axis: (x: 0, y: 10.0, z: 0))
                                     .sheet(isPresented: self.$showContent) { ContentView() }
                                 }
                                 .frame(width: 246, height: 360)
                             }
-                            
                         }
                     }
                     .padding(.leading, 60)
@@ -70,7 +77,7 @@ struct ContentView: View {
         }.navigationViewStyle(StackNavigationViewStyle())
         
     }
-}            
+}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
