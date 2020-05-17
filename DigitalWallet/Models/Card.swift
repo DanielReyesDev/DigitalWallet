@@ -27,4 +27,35 @@ class Card: Identifiable {
         self.cvc = cvc
         self.memberSince = memberSince
     }
+    
+//    init(cardEntity: CardEntity) {
+//        self.number = cardEntity.number ?? ""
+//        self.bankEntity = cardEntity.bankEntity ?? ""
+//        self.holder = cardEntity.holder ?? ""
+//        self.monthExp = Int(cardEntity.monthExp)
+//        self.yearExp = Int(cardEntity.yearExp)
+//        self.cvc = Int(cardEntity.cvc)
+//        self.memberSince = Int(cardEntity.memberSince)
+//    }
+}
+
+extension Card {
+    func printInfo() {
+        
+        let cardInfo = """
+        ----- Card info -----
+        id: \(self.id)
+        number: \(self.number)
+        bankEntity: \(self.bankEntity)
+        holder: \(self.holder)
+        monthExp: \(self.monthExp)
+        yearExp: \(self.yearExp)
+        cvc: \(self.cvc)
+        memberSince: \(self.memberSince)
+        "---------------------"
+        """
+        
+        print(cardInfo)
+        
+    }
 }

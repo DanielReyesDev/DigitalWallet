@@ -17,10 +17,11 @@ final class AddCardViewModel: ObservableObject {
     @Published var currentText: String
     
     // MARK: Properties
-    private var fieldIndex: Int = 0
+    var fieldIndex: Int = 0
     private var titles: [String]
     private var placeholders: [String]
     @State var card: Card
+    @State var isLastField = false
     
     // MARK: Init
     init(titles: [String], placeholders: [String]) {
@@ -52,7 +53,10 @@ final class AddCardViewModel: ObservableObject {
     private func step(with number: Int) {
         let newIndex = fieldIndex + number
         guard newIndex >= 0 else { return }
-        guard newIndex < titles.count else { return }
+        guard newIndex < titles.count else {
+//            isLastField = true
+            return
+        }
         // After validation, first save the current text
         saveCardField()
         fieldIndex = newIndex
@@ -100,5 +104,7 @@ final class AddCardViewModel: ObservableObject {
         case .memberSince:
             self.card.memberSince = Int(currentText) ?? 0
         }
+        self.isLastField = true
+        print("isLastField: \(isLastField)")
     }
 }

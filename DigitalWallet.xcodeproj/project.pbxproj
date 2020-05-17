@@ -23,6 +23,7 @@
 		68EA6D022471A7C300007E69 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EA6D012471A7C300007E69 /* Constants.swift */; };
 		68EA6D072471A85A00007E69 /* CardField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EA6D062471A85A00007E69 /* CardField.swift */; };
 		68EA6D092471A89800007E69 /* AddCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EA6D082471A89800007E69 /* AddCardViewModel.swift */; };
+		68EA6D102471B2AD00007E69 /* FloatingButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EA6D0F2471B2AD00007E69 /* FloatingButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		68EA6D012471A7C300007E69 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		68EA6D062471A85A00007E69 /* CardField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardField.swift; sourceTree = "<group>"; };
 		68EA6D082471A89800007E69 /* AddCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardViewModel.swift; sourceTree = "<group>"; };
+		68EA6D0F2471B2AD00007E69 /* FloatingButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 			children = (
 				68EA6D0D2471AC4300007E69 /* Form */,
 				68EA6D0E2471AC5C00007E69 /* Card */,
+				68EA6D0F2471B2AD00007E69 /* FloatingButtonStyle.swift */,
 			);
 			path = Reusable;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				345EA41423DF86E400E28076 /* Card.swift in Sources */,
 				34A192A123E4DD1A00125FCC /* AddCardView.swift in Sources */,
 				68EA6D092471A89800007E69 /* AddCardViewModel.swift in Sources */,
+				68EA6D102471B2AD00007E69 /* FloatingButtonStyle.swift in Sources */,
 				345EA41623DF878D00E28076 /* CardCaptionView.swift in Sources */,
 				34F9B5FD23A97CDB006483AD /* DigitalWallet.xcdatamodeld in Sources */,
 				68EA6D022471A7C300007E69 /* Constants.swift in Sources */,
