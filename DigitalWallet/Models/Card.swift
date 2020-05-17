@@ -28,24 +28,3 @@ class Card: Identifiable {
         self.memberSince = memberSince
     }
 }
-
-final class Constants {
-    
-    struct Card {
-        static let titles = ["Card Number",
-                             "Bank's name",
-                             "Holder's name",
-                             "Exp. Month",
-                             "Exp. Year",
-                             "CVC",
-                             "Member Since"]
-        
-        static let placeholders = ["1234-1234-1234-1234",
-                                   "My Bank",
-                                   "Jonh Doe",
-                                   "07",
-                                   "21",
-                                   "123",
-                                   "2019"]
-    }
-}

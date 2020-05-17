@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct NewCardForm {
+struct NewCardFormView {
     
     // MARK: State Properties
     @Binding var title: String
@@ -28,7 +28,7 @@ struct NewCardForm {
 }
 
 // MARK: - View
-extension NewCardForm: View {
+extension NewCardFormView: View {
     var body: some View {
         VStack {
             VStack {
@@ -47,7 +47,7 @@ extension NewCardForm: View {
 // MARK: - Preview
 struct NewCardForm_Previews: PreviewProvider {
     static var previews: some View {
-        NewCardForm(title: .constant(""),
+        NewCardFormView(title: .constant(""),
                     placeholder: .constant(""),
                     text: .constant(""))
     }

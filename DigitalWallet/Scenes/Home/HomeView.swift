@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  HomeViewView.swift
 //  DigitalWallet
 //
 //  Created by Daniel Reyes Sanchez on 17/12/19.
@@ -31,7 +31,7 @@ let cards = [Card(number: "4444 4444 4444 4444",
              memberSince: 2016)
              ]
 
-struct ContentView: View {
+struct HomeView: View {
     
 //    var cardsData = [CardViewModel(number: .constant("4444 4444 4444 4444"),
 //                                   bankEntity: .constant("Banorte"),
@@ -54,9 +54,10 @@ struct ContentView: View {
                         ForEach(cardsData) { card in
                             Button(action: { self.showContent.toggle() }) {
                                 GeometryReader { geometry in
-                                    CardView(viewModel: card)
+                                    // TODO:- replace this
+                                    CardView(viewModel: .constant(card))
                                     .rotation3DEffect(Angle(degrees: Double(geometry.frame(in: .global).minX - 30) / -40), axis: (x: 0, y: 10.0, z: 0))
-                                    .sheet(isPresented: self.$showContent) { ContentView() }
+                                    .sheet(isPresented: self.$showContent) { HomeView() }
                                 }
                                 .frame(width: 246, height: 360)
                             }
@@ -79,8 +80,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        HomeView()
     }
 }

@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct CardCaption: View {
+struct CardCaptionView: View {
     var title: String
     var body: some View {
         Text(title)
