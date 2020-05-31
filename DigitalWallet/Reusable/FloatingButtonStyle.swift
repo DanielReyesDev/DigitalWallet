@@ -10,14 +10,18 @@ import SwiftUI
 
 struct FloatingButtonStyle: ButtonStyle {
     
-//    @Binding var isReady: Bool
+    @Binding var isReady: Bool
+    
+//    init(isReady: Binding<Bool>) {
+//        _isReady = isReady
+//    }
     
     func makeBody(configuration: Self.Configuration) -> some View {
-//        print(isReady)
+        print(isReady)
         return configuration.label
             .frame(width: 50, height: 50, alignment: .center)
-            .background(Color.green)
-//            .background( isReady ? Color.green : Color.black )
+//            .background(Color.green)
+            .background( isReady ? Color.green : Color.black )
             .foregroundColor(Color.white)
             .font(.system(size: 40))
             .cornerRadius(25)

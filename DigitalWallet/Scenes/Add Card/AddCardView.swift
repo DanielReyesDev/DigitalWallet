@@ -8,56 +8,49 @@
 
 import SwiftUI
 import CoreData
+import Logger
 
 struct AddCardView: View {
     
-//    @Environment(\.managedObjectContext) var moc
+    @Environment(\.managedObjectContext) var moc
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     
-    @ObservedObject var viewModel = AddCardViewModel(titles: Constants.Card.titles,
-                                                     placeholders: Constants.Card.placeholders)
+    @ObservedObject var viewModel = AddCardViewModel(titles: Constants.Card.titles, placeholders: Constants.Card.placeholders)
         
     var body: some View {
         VStack {
-            Spacer()
             CardView(viewModel: $viewModel.card)
-            Spacer()
             NewCardFormView(title: $viewModel.currentTitle,
-                        placeholder: $viewModel.currentPlaceHolder,
-                        text: $viewModel.currentText)
+                            placeholder: $viewModel.currentPlaceHolder,
+                            text: $viewModel.currentText)
             HStack {
                 Button("<") {
                     self.viewModel.previousField()
-                }.buttonStyle(FloatingButtonStyle()) //isReady: self.viewModel.$isLastField))
+                }.buttonStyle(FloatingButtonStyle(isReady: .constant(false)))
                 Spacer()
                 Button(">") {
                     self.viewModel.nextField()
-                }.buttonStyle(FloatingButtonStyle()) //isReady: self.viewModel.$isLastField))
-                
+//                    if self.viewModel.shouldSaveCard {
+//                        self.saveCard()
+//                    }
+                }.buttonStyle(FloatingButtonStyle(isReady: .constant(false))) //$viewModel.shouldSaveCard))
             }.padding(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16))
             Spacer()
-            
         }.navigationBarTitle(Text("Add Card")) // Default to large title style
     }
     
     private func saveCard() {
+//        Log.info("saving Card... ")
 //        let cardEntity = CardEntity(context: self.moc)
-//        cardEntity.id = UUID()
-//        cardEntity.number = viewModel.card.number
-//        cardEntity.bankEntity = viewModel.card.bankEntity
-//        cardEntity.holder = viewModel.card.holder
-//        cardEntity.monthExp = Int32(viewModel.card.monthExp)
-//        cardEntity.yearExp = Int32(viewModel.card.yearExp)
-//        cardEntity.cvc = Int32(viewModel.card.cvc)
-//        cardEntity.memberSince = Int32(viewModel.card.memberSince)
-//        
+//        cardEntity.copy(from: viewModel.card)
 //        do {
 //            try self.moc.save()
-//            print("Card Saved!")
+//            self.mode.wrappedValue.dismiss()
+//            Log.success("Card saved!")
 //        } catch {
-//            print(error.localizedDescription)
+//            Log.success("Error while saving card \(error.localizedDescription)")
 //        }
     }
-    
 }
 
 struct AddCardView_Previews: PreviewProvider {
