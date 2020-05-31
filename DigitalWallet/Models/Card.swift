@@ -28,15 +28,15 @@ class Card: Identifiable {
         self.memberSince = memberSince
     }
     
-//    init(cardEntity: CardEntity) {
-//        self.number = cardEntity.number ?? ""
-//        self.bankEntity = cardEntity.bankEntity ?? ""
-//        self.holder = cardEntity.holder ?? ""
-//        self.monthExp = Int(cardEntity.monthExp)
-//        self.yearExp = Int(cardEntity.yearExp)
-//        self.cvc = Int(cardEntity.cvc)
-//        self.memberSince = Int(cardEntity.memberSince)
-//    }
+    init(cardEntity: CardEntity) {
+        self.number = cardEntity.number ?? ""
+        self.bankEntity = cardEntity.bankEntity ?? ""
+        self.holder = cardEntity.holder ?? ""
+        self.monthExp = Int(cardEntity.monthExp)
+        self.yearExp = Int(cardEntity.yearExp)
+        self.cvc = Int(cardEntity.cvc)
+        self.memberSince = Int(cardEntity.memberSince)
+    }
 }
 
 extension Card {
