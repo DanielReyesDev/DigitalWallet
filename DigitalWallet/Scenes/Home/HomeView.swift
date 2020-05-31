@@ -9,8 +9,6 @@
 import SwiftUI
 import CoreData
 
-extension CardEntity: Identifiable { }
-
 struct HomeView: View {
     
     @Environment(\.managedObjectContext) var moc

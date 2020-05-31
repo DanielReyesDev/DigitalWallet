@@ -22,6 +22,7 @@
 		34F9B60723A97CDE006483AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34F9B60523A97CDE006483AD /* LaunchScreen.storyboard */; };
 		6814542E24833D9900B8E79E /* Logger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6814542D24833D9900B8E79E /* Logger.framework */; };
 		6814542F24833D9900B8E79E /* Logger.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6814542D24833D9900B8E79E /* Logger.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		681454362483423100B8E79E /* CardEntity+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681454352483423100B8E79E /* CardEntity+Extensions.swift */; };
 		68668CA82438F8AC00C00A43 /* NewCardFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68668CA72438F8AC00C00A43 /* NewCardFormView.swift */; };
 		68EA6D022471A7C300007E69 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EA6D012471A7C300007E69 /* Constants.swift */; };
 		68EA6D072471A85A00007E69 /* CardField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EA6D062471A85A00007E69 /* CardField.swift */; };
@@ -62,6 +63,7 @@
 		34F9B60823A97CDE006483AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61564B26D3CF58AFDB267D2A /* Pods-DigitalWallet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigitalWallet.release.xcconfig"; path = "Target Support Files/Pods-DigitalWallet/Pods-DigitalWallet.release.xcconfig"; sourceTree = "<group>"; };
 		6814542D24833D9900B8E79E /* Logger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Logger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		681454352483423100B8E79E /* CardEntity+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardEntity+Extensions.swift"; sourceTree = "<group>"; };
 		68668CA72438F8AC00C00A43 /* NewCardFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCardFormView.swift; sourceTree = "<group>"; };
 		68EA6D012471A7C300007E69 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		68EA6D062471A85A00007E69 /* CardField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardField.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 			children = (
 				345EA41323DF86E400E28076 /* Card.swift */,
 				68EA6D062471A85A00007E69 /* CardField.swift */,
+				681454352483423100B8E79E /* CardEntity+Extensions.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 			files = (
 				68EA6D072471A85A00007E69 /* CardField.swift in Sources */,
 				34F9B5F823A97CDB006483AD /* AppDelegate.swift in Sources */,
+				681454362483423100B8E79E /* CardEntity+Extensions.swift in Sources */,
 				345EA41423DF86E400E28076 /* Card.swift in Sources */,
 				34A192A123E4DD1A00125FCC /* AddCardView.swift in Sources */,
 				68EA6D092471A89800007E69 /* AddCardViewModel.swift in Sources */,

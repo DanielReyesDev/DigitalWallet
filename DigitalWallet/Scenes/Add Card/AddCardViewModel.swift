@@ -8,20 +8,24 @@
 
 import Foundation
 import SwiftUI
+import Logger
 
 final class AddCardViewModel: ObservableObject {
     
-    // MARK: State Properties
+    // MARK: - Published Properties
     @Published var currentTitle: String
     @Published var currentPlaceHolder: String
     @Published var currentText: String
+    @Published var isLastField: Bool
+    @Published var shouldSaveCard: Bool
     
-    // MARK: Properties
-    var fieldIndex: Int = 0
+    // MARK: - State Properties
+    @State var card: Card
+    
+    // MARK: - Private Properties
     private var titles: [String]
     private var placeholders: [String]
-    @State var card: Card
-    @State var isLastField = false
+    private var fieldIndex: Int = 0
     
     // MARK: Init
     init(titles: [String], placeholders: [String]) {
@@ -38,6 +42,8 @@ final class AddCardViewModel: ObservableObject {
         self.currentTitle = titles[0]
         self.currentPlaceHolder = placeholders[0]
         self.currentText = ""
+        self.isLastField = false
+        self.shouldSaveCard = false
     }
     
     // MARK: Public Methods
@@ -54,9 +60,11 @@ final class AddCardViewModel: ObservableObject {
         let newIndex = fieldIndex + number
         guard newIndex >= 0 else { return }
         guard newIndex < titles.count else {
-//            isLastField = true
+            saveCardField()
+            shouldSaveCard = true
             return
         }
+        isLastField = false
         // After validation, first save the current text
         saveCardField()
         fieldIndex = newIndex
@@ -104,7 +112,5 @@ final class AddCardViewModel: ObservableObject {
         case .memberSince:
             self.card.memberSince = Int(currentText) ?? 0
         }
-        self.isLastField = true
-        print("isLastField: \(isLastField)")
     }
 }
