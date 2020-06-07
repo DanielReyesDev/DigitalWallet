@@ -48,7 +48,7 @@ struct HomeView: View {
                         ForEach(cards) { card in
                             Button(action: { self.showContent.toggle() }) {
                                 GeometryReader { geometry in
-                                    CardView(viewModel: .constant(Card(cardEntity: card)) )
+                                    CardFaceView(viewModel: .constant(Card(cardEntity: card)) )
                                     .rotation3DEffect(Angle(degrees: Double(geometry.frame(in: .global).minX - 30) / -40), axis: (x: 0, y: 10.0, z: 0))
                                     .sheet(isPresented: self.$showContent) { HomeView() }
                                 }

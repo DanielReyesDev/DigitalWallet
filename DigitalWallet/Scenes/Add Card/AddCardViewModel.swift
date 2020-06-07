@@ -17,7 +17,7 @@ final class AddCardViewModel: ObservableObject {
     @Published var currentPlaceHolder: String
     @Published var currentText: String
     @Published var isLastField: Bool
-    @Published var shouldSaveCard: Bool
+    @Published var shouldBackToHome: Bool
     
     // MARK: - State Properties
     @State var card: Card
@@ -26,6 +26,7 @@ final class AddCardViewModel: ObservableObject {
     private var titles: [String]
     private var placeholders: [String]
     private var fieldIndex: Int = 0
+    private lazy var storage = CardStorage(card: $card)
     
     // MARK: Init
     init(titles: [String], placeholders: [String]) {
@@ -43,7 +44,7 @@ final class AddCardViewModel: ObservableObject {
         self.currentPlaceHolder = placeholders[0]
         self.currentText = ""
         self.isLastField = false
-        self.shouldSaveCard = false
+        self.shouldBackToHome = false
     }
     
     // MARK: Public Methods
@@ -61,7 +62,7 @@ final class AddCardViewModel: ObservableObject {
         guard newIndex >= 0 else { return }
         guard newIndex < titles.count else {
             saveCardField()
-            shouldSaveCard = true
+            saveCard()
             return
         }
         isLastField = false
@@ -72,6 +73,16 @@ final class AddCardViewModel: ObservableObject {
         currentPlaceHolder = placeholders[fieldIndex]
         // Finally set the new current text
         setupCurrentText()
+    }
+    
+    private func saveCard() {
+        do {
+            try storage.saveCard()
+            Log.success("Card saved!")
+            shouldBackToHome = true
+        } catch {
+            Log.success("Error while saving card \(error.localizedDescription)")
+        }
     }
     
     private func setupCurrentText() {

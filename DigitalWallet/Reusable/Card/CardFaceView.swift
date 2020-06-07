@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct CardView: View {
+struct CardFaceView: View {
     
     @Binding var viewModel: Card
     
@@ -81,6 +81,6 @@ struct CardView_Previews: PreviewProvider {
                         cvc: 123,
                         memberSince: 2018)
         
-        return CardView(viewModel: .constant(card))
+        return CardFaceView(viewModel: .constant(card))
     }
 }

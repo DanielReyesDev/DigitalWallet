@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1724BF29672C8EBD5EAEC256 /* Pods_DigitalWallet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09961BC779ED905828BBBB01 /* Pods_DigitalWallet.framework */; };
-		345EA40F23DF712900E28076 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345EA40E23DF712900E28076 /* CardView.swift */; };
+		345EA40F23DF712900E28076 /* CardFaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345EA40E23DF712900E28076 /* CardFaceView.swift */; };
 		345EA41223DF847C00E28076 /* CreditCard.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 345EA41123DF847C00E28076 /* CreditCard.ttf */; };
 		345EA41423DF86E400E28076 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345EA41323DF86E400E28076 /* Card.swift */; };
 		345EA41623DF878D00E28076 /* CardCaptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345EA41523DF878D00E28076 /* CardCaptionView.swift */; };
@@ -23,6 +23,8 @@
 		6814542E24833D9900B8E79E /* Logger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6814542D24833D9900B8E79E /* Logger.framework */; };
 		6814542F24833D9900B8E79E /* Logger.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6814542D24833D9900B8E79E /* Logger.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		681454362483423100B8E79E /* CardEntity+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681454352483423100B8E79E /* CardEntity+Extensions.swift */; };
+		68145438248360C400B8E79E /* CardStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68145437248360C400B8E79E /* CardStorage.swift */; };
+		68549152248C79EC00493E19 /* CardBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68549151248C79EC00493E19 /* CardBackView.swift */; };
 		68668CA82438F8AC00C00A43 /* NewCardFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68668CA72438F8AC00C00A43 /* NewCardFormView.swift */; };
 		68EA6D022471A7C300007E69 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EA6D012471A7C300007E69 /* Constants.swift */; };
 		68EA6D072471A85A00007E69 /* CardField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EA6D062471A85A00007E69 /* CardField.swift */; };
@@ -47,7 +49,7 @@
 /* Begin PBXFileReference section */
 		09961BC779ED905828BBBB01 /* Pods_DigitalWallet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DigitalWallet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D086536B8B51FD5B35DC95A /* Pods-DigitalWallet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigitalWallet.debug.xcconfig"; path = "Target Support Files/Pods-DigitalWallet/Pods-DigitalWallet.debug.xcconfig"; sourceTree = "<group>"; };
-		345EA40E23DF712900E28076 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		345EA40E23DF712900E28076 /* CardFaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFaceView.swift; sourceTree = "<group>"; };
 		345EA41123DF847C00E28076 /* CreditCard.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CreditCard.ttf; sourceTree = "<group>"; };
 		345EA41323DF86E400E28076 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		345EA41523DF878D00E28076 /* CardCaptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCaptionView.swift; sourceTree = "<group>"; };
@@ -64,6 +66,8 @@
 		61564B26D3CF58AFDB267D2A /* Pods-DigitalWallet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigitalWallet.release.xcconfig"; path = "Target Support Files/Pods-DigitalWallet/Pods-DigitalWallet.release.xcconfig"; sourceTree = "<group>"; };
 		6814542D24833D9900B8E79E /* Logger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Logger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		681454352483423100B8E79E /* CardEntity+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardEntity+Extensions.swift"; sourceTree = "<group>"; };
+		68145437248360C400B8E79E /* CardStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStorage.swift; sourceTree = "<group>"; };
+		68549151248C79EC00493E19 /* CardBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBackView.swift; sourceTree = "<group>"; };
 		68668CA72438F8AC00C00A43 /* NewCardFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCardFormView.swift; sourceTree = "<group>"; };
 		68EA6D012471A7C300007E69 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		68EA6D062471A85A00007E69 /* CardField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardField.swift; sourceTree = "<group>"; };
@@ -138,6 +142,7 @@
 				68EA6D0C2471AA4A00007E69 /* Utils */,
 				68EA6D0B2471A9FA00007E69 /* Resources */,
 				34F9B60223A97CDE006483AD /* Preview Content */,
+				68145437248360C400B8E79E /* CardStorage.swift */,
 			);
 			path = DigitalWallet;
 			sourceTree = "<group>";
@@ -210,7 +215,8 @@
 		68EA6D0E2471AC5C00007E69 /* Card */ = {
 			isa = PBXGroup;
 			children = (
-				345EA40E23DF712900E28076 /* CardView.swift */,
+				345EA40E23DF712900E28076 /* CardFaceView.swift */,
+				68549151248C79EC00493E19 /* CardBackView.swift */,
 				345EA41523DF878D00E28076 /* CardCaptionView.swift */,
 			);
 			path = Card;
@@ -336,7 +342,9 @@
 				68EA6D072471A85A00007E69 /* CardField.swift in Sources */,
 				34F9B5F823A97CDB006483AD /* AppDelegate.swift in Sources */,
 				681454362483423100B8E79E /* CardEntity+Extensions.swift in Sources */,
+				68549152248C79EC00493E19 /* CardBackView.swift in Sources */,
 				345EA41423DF86E400E28076 /* Card.swift in Sources */,
+				68145438248360C400B8E79E /* CardStorage.swift in Sources */,
 				34A192A123E4DD1A00125FCC /* AddCardView.swift in Sources */,
 				68EA6D092471A89800007E69 /* AddCardViewModel.swift in Sources */,
 				68EA6D102471B2AD00007E69 /* FloatingButtonStyle.swift in Sources */,
@@ -346,7 +354,7 @@
 				68668CA82438F8AC00C00A43 /* NewCardFormView.swift in Sources */,
 				34F9B5FF23A97CDB006483AD /* HomeView.swift in Sources */,
 				34F9B5FA23A97CDB006483AD /* SceneDelegate.swift in Sources */,
-				345EA40F23DF712900E28076 /* CardView.swift in Sources */,
+				345EA40F23DF712900E28076 /* CardFaceView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
